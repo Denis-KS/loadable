@@ -1,7 +1,5 @@
-import universities from './universities/key';
-import apis from './apis/key';
-import { valueof } from '../toolkit/valueof';
+import { Universities } from './universities/key';
+import { Apis } from './apis/key';
 
-export type Domain = 
-    valueof<typeof universities> |
-    valueof<typeof apis>;
+export type Domain = Apis | Universities;
+    
