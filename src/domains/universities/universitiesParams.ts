@@ -1,0 +1,1 @@
+export type UniversitiesParams = { country: string | undefined };

@@ -1,0 +1,1 @@
+export const removeEmpty = <T>(obj: T) => Object.entries(obj).reduce((result, [key, value]) => (value ? {...result, [key]: value} : result), {});
