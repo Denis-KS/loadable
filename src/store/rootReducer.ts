@@ -1,8 +1,13 @@
 import { applyMiddleware, createStore, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import { loadableData } from "./loadableData/reducer";
+import { loadableData, ILoadableDataState } from "./loadableData/reducer";
+import loadableDataKey from './loadableData/key';
 
-const rootReducer = combineReducers({
+export interface IStore<D, P, E> {
+    [loadableDataKey]: ILoadableDataState<D, P, E>
+} 
+
+const rootReducer = <D, P, E>() => combineReducers<IStore<D, P, E>>({
     ...loadableData,
  });
 

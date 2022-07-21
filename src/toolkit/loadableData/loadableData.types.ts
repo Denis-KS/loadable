@@ -11,3 +11,5 @@ export type LoadableData<D, P, E> =
    Loaded<D> | 
    Loading<P> | 
    Failed<E>;
+
+export type Fetch<D, P> = (params?: P) => Promise<D>;

@@ -1,5 +1,5 @@
-import { Universities } from './universities/key';
-import { Apis } from './apis/key';
+import { Universities } from './universities/index';
+import { Apis } from './apis/index';
 
 export type Domain = Apis | Universities;
     

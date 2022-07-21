@@ -1,13 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Provider } from 'react-redux';
 import { store } from './store/rootReducer';
+import { useLoadableData } from './toolkit/loadableData/useLoadableData';
+import { getUniversities } from './domains/universities/api';
 
 function App() {
-  console.log(store.getState())
+  // console.log(store.getState())
+
+  const { state, setState } = useLoadableData(getUniversities, 'universities', { type: 'loading' });
+  console.log(state);
+
   return (
-    <Provider store={store}>
+    
 <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -24,7 +29,6 @@ function App() {
         </a>
       </header>
     </div>
-    </Provider>
   );
 }
 
