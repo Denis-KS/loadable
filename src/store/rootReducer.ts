@@ -11,4 +11,4 @@ const rootReducer = <D, P, E>() => combineReducers<IStore<D, P, E>>({
     ...loadableData,
  });
 
-export const store = createStore(rootReducer, applyMiddleware(thunk));
+export const store = createStore(rootReducer(), applyMiddleware(thunk));
