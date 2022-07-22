@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Domain } from '../../domains/index';
+import { Domain } from '../../domains';
 import { setLoadableState } from '../../store/loadableData/actions';
 import { getLoadableState } from '../../store/loadableData/selectors';
 import { IStore } from '../../store/rootReducer';
